@@ -3,7 +3,7 @@ import { View, FlatList, Text, StyleSheet, StatusBar, Platform } from 'react-nat
 import ActionButton from '../components/ActionButton';
 import DatePickerModal from '../components/DatePickerModal';
 import { fetchNEOs } from '../Api';
-import ItemData from '../components/ItemData';
+import ListCell from '../components/ListCell';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -36,7 +36,7 @@ const NeoScreen = () => {
   };
 
   const renderNeoItem = ({ item }) => (
-    <ItemData neo={item} />
+    <ListCell neo={item} />
   );
 
   const handleDateChange = (date) => {

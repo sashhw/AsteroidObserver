@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Modal } from 'react-native';
 import DetailScreen from '../screens/DetailScreen';
-import ActionButton from '../components/ActionButton';
+import ActionButton from './ActionButton';
 
-const ItemData = ({ neo }) => {
+const ListCell = ({ neo }) => {
   const isHazardous = neo.is_potentially_hazardous_asteroid;
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -66,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ItemData;
+export default ListCell;
