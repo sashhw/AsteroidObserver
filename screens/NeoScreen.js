@@ -66,6 +66,7 @@ const NeoScreen = () => {
         <DateTimePickerModal
         isVisible={isDatePickerVisible}
         mode={new Date(selectedDate)}
+        display={'spinner'} 
         onConfirm={(date) => {
               setSelectedDate(dayjs(date).format('YYYY-MM-DD'));
               setDatePickerVisible(false);
